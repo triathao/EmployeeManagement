@@ -23,20 +23,59 @@ function init() {
     inquirer
       .prompt({
         name: "action",
-        type: "rawlist",
+        type: "list",
         message: "What would you like to do?",
         choices: [
             "View Employees",
             "View Roles",
-            "View Department",
+            "View Departments",
             "Add Employee",
-            "Add Roles",
+            "Add Role",
             "Add Department",
             "Delete Employee",
-            "Delete Roles",
+            "Delete Role",
             "Delete Department",
             "Update Employee Role",
-            "Exit"
+            "End"
         ]
     })
+
+    .then((answer) => {
+        switch (answer.action) {
+            case "View Employees":
+                viewEmployees();
+                break;
+            case "View Roles":
+                viewRoles();
+                break;
+            case "View Departments":
+                viewDepartments();
+                break;
+            case "Add Employee":
+                addEmployee();
+                break;
+            case "Add Role":
+                addRole();
+                break;
+            case "Add Department":
+                addDepartment();
+                break;
+            case "Delete Employee":
+                deleteEmployee();
+                break;
+            case "Delete Role":
+                deleteRole();
+                break;
+            case "Delete Department":
+                deleteDepartment();
+                break;
+            case "Update Employee Role":
+                updateEmployeeRole();
+                break;
+            case "End":
+                end();
+                break;
+    
+            }
+        })
 }
