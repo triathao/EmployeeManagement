@@ -195,7 +195,7 @@ function addRole() {
   });
 }
 
-// Add Department
+// Add
 function addDepartment() {
   inquirer
   .prompt([

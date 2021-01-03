@@ -10,7 +10,7 @@ CREATE TABLE department (
   PRIMARY KEY (id)
 );
 
--- Create the table role.
+-- table role.
 CREATE TABLE role (
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(30) NOT NULL,
@@ -19,7 +19,7 @@ CREATE TABLE role (
   PRIMARY KEY (id)
 );
 
--- Create the table employee.
+-- table employee.
 CREATE TABLE employee (
   id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(30),
