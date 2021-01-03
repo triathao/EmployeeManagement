@@ -2,12 +2,12 @@
 
 ## Description
 
-This appplication uses Node.js and Inquirer to allows users to add departments, roles, and employees, With options to update and view by interacting with SQL.
+This appplication uses Node.js and Inquirer to allows users to add departments, roles, and employees, With options to update and view by interacting with SQL. See video example <a href="https://youtu.be/XT9neo_XXIg">here.</a>
 
 ## Usage
 
-To start application enter command line npm start
-Run npm start
+To start application enter command line npm start.
+Run npm start.
 
 ## Screenshots
 
@@ -18,4 +18,4 @@ Run npm start
 
 Github:<a href="https://github.com/triathao">triathao</a> <br>
 Email: <a href="triathao@gmail.com">triathao@gmail.com</a>
-
+Video Project: <a href="https://youtu.be/XT9neo_XXIg">Here</a>
