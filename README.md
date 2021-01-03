@@ -22,3 +22,6 @@ To start application enter command line npm start
 
 Github: <a href=>"https://github.com/triathao"</a>
 Email: <a href=>"triathao@gmail.com"</a>
+
+<a href="https://github.com/triathao"></a> <br>
+<a href="triathao@gmail.com"></a>
