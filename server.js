@@ -15,10 +15,10 @@ const connection = mysql.createConnection({
 
   connection.connect(function (err) {
     if (err) throw err;
-    init()
+    action()
 });
 
-function init() {
+function action() {
     inquirer
       .prompt({
         name: "action",
@@ -42,7 +42,7 @@ function init() {
 
     .then(function(answer) {
         switch (answer.action) {
-            case "View joined tables":
+            case "View Joined Tables":
           viewJoined();
                 break;
             case "View Employees":
@@ -115,6 +115,7 @@ function viewDepartments() {
     })
 }
 
+// Add Employee
 function addEmployee() {
   inquirer
   .prompt([
@@ -157,6 +158,7 @@ function addEmployee() {
   });
 }
 
+// Add Role
 function addRole() {
   inquirer
   .prompt([
@@ -193,6 +195,7 @@ function addRole() {
   });
 }
 
+// Add Department
 function addDepartment() {
   inquirer
   .prompt([
@@ -217,6 +220,7 @@ function addDepartment() {
   });
 }
 
+// Delete Employee
 function deleteEmployee() {
     connection.query("SELECT * FROM employee", function(err, results) {
         if (err) throw err;
@@ -300,4 +304,105 @@ function deleteRole() {
                 );
             });
         });  
+}
+
+//Delete Department
+function deleteDepartment() {
+    connection.query("SELECT * FROM department", function(err, results) {
+        if (err) throw err;
+        inquirer
+          .prompt([
+            {
+              name: "choice",
+              type: "rawlist",
+              choices: function() {
+                var choiceArray = [];
+                for (var i = 0; i < results.length; i++) {
+                  choiceArray.push(results[i].name);
+                }
+                return choiceArray;
+              },
+              message: "Which department would you like to remove?"
+            }
+          ])
+          .then(function(answer) {
+                var chosenDep;
+                for (var i = 0; i < results.length; i++) {
+                if (results[i].name === answer.choice) {
+                    chosenDep = results[i];
+                }
+                }
+                connection.query(
+                    "DELETE FROM department WHERE ?",
+                    [
+                    {
+                        id: chosenDep.id
+                    }
+                    ],
+                    function(err) {
+                    if (err) throw err;
+                    console.log("Department removed successfully!");
+                    action();
+                    }
+                );
+            });
+        });  
+}
+
+//Update Employee Role
+function updateEmployeeRole() {
+    connection.query("SELECT * FROM employee", function(err, results) {
+      if (err) throw err;
+      inquirer
+        .prompt([
+          {
+            name: "choice",
+            type: "rawlist",
+            choices: function() {
+              var choiceArray = [];
+              for (var i = 0; i < results.length; i++) {
+                choiceArray.push(`${results[i].first_name} ${results[i].last_name}`);
+              }
+              return choiceArray;
+            },
+            message: "Which employee's role would you like to update?"
+          },
+          {
+            name: "newRole",
+            type: "input",
+            message: "What is the employee's new role id?"
+          }
+        ])
+        .then(function(answer) {
+              var chosenEmployee;
+              for (var i = 0; i < results.length; i++) {
+              if (`${results[i].first_name} ${results[i].last_name}` === answer.choice) {
+                  chosenEmployee = results[i];
+              }
+              }
+              connection.query(
+                  "UPDATE employee SET ? WHERE ?",
+                  [
+                  {
+                      role_id: answer.newRole
+                  },
+                  {
+                      id: chosenEmployee.id
+                  }
+                  ],
+                  function(err) {
+                  if (err) throw err;
+                  console.log("Employee updated successfully!");
+                  action();
+                  }
+              );
+          });
+      });  
+  }
+
+  //End
+  function end(err) {
+    if (err) throw err
+    console.log("Connection ended.")
+    connection.end()
 }
