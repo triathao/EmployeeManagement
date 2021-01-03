@@ -11,7 +11,7 @@ Run npm start
 
 ## Screenshots
 
-<img src="" alt="">
+<img src="https://github.com/triathao/EmployeeManagement/blob/main/Assets/Screen%20Shot%202021-01-02%20at%206.56.55%20PM.png?raw=true" alt="screenshot">
 
 
 ## Questions
