@@ -20,8 +20,6 @@ To start application enter command line npm start
 
 ## Questions
 
-Github: <a href=>"https://github.com/triathao"</a>
-Email: <a href=>"triathao@gmail.com"</a>
+Github:<a href="https://github.com/triathao">triathao</a> <br>
+Email: <a href="triathao@gmail.com">triathao@gmail.com</a>
 
-<a href="https://github.com/triathao"></a> <br>
-<a href="triathao@gmail.com"></a>
