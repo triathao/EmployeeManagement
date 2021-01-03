@@ -11,13 +11,14 @@ We would like you to have well over 200 commits by graduation, so commit early a
 
 ## Usage
 
-We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!
+To start application enter command line npm start
 
-## Contributing
+## Screenshots
 
-OWe would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!
+<img src="" alt="">
 
 
 ## Questions
 
-We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!We would like you to have well over 200 commits by graduation, so commit early and often!
+Github: <a href="https://github.com/triathao"></a>
+Email: <a href="triathao@gmail.com"></a>
