@@ -17,5 +17,5 @@ Run npm start.
 ## Questions
 
 Github:<a href="https://github.com/triathao">triathao</a> <br>
-Email: <a href="triathao@gmail.com">triathao@gmail.com</a>
+Email: <a href="triathao@gmail.com">triathao@gmail.com</a> <br>
 Video Project: <a href="https://youtu.be/XT9neo_XXIg">Here</a>
